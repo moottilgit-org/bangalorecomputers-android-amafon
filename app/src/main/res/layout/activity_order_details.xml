@@ -1,0 +1,301 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                android:layout_margin="8dp"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="4dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgAvatar"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="6dp"
+                            android:src="@drawable/wmv"/>
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgAvatar"
+                            android:layout_alignParentTop="true"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            tools:text="Muhammed Anees C.A" />
+
+                        <TextView
+                            android:id="@+id/tvNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgAvatar"
+                            android:layout_below="@+id/tvName"
+                            android:layout_toStartOf="@+id/tvDate"
+                            android:drawableStart="@drawable/ic_call_icon"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            tools:text="1234567890" />
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/tvName"
+                            android:gravity="top|end"
+                            android:drawableStart="@drawable/ic_access_time_icon"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            tools:text="1234567890" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tvOrderID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold"
+                            tools:text="#123" />
+
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="top|end"
+                            android:textSize="16sp"
+                            android:layout_gravity="center_vertical"
+                            android:textStyle="bold"
+                            android:background="?selectableItemBackground"
+                            android:drawableEnd="@drawable/ic_expand_more"
+                            android:textColor="@color/colorAccent"
+                            tools:text="NEW" />
+
+                        <Button
+                            android:id="@+id/btnCall"
+                            android:layout_width="64dp"
+                            android:layout_height="26dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_gravity="center_vertical"
+                            android:textAllCaps="false"
+                            android:drawableStart="@drawable/ic_call_white"
+                            style="@style/AppTheme.AppButton2"
+                            android:text="@string/call"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnPaid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="6dp"
+                            android:textAllCaps="false"
+                            style="@style/AppTheme.AppButton2"
+                            android:text="@string/payment_received"/>
+
+                        <TextView
+                            android:id="@+id/tvPaidInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            tools:text="Paid on "
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/btnAddress"
+                            android:layout_width="72dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="3dp"
+                            android:textAllCaps="false"
+                            style="@style/AppTheme.AppButton2"
+                            android:text="Address"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAddressContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="visible" >
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:textSize="14sp"
+                            android:maxLines="3"
+                            android:ellipsize="end"
+                            android:drawableEnd="@drawable/ic_expand_more"
+                            android:textColor="@color/colorPrimaryDark"
+                            tools:text="Address"/>
+
+                        <ImageButton
+                            android:id="@+id/imgLocate"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:scaleType="fitCenter"
+                            android:padding="3dp"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/pref_icon_location_48"
+                            android:background="?selectableItemBackground" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:drawableEnd="@drawable/ic_expand_more"
+                android:textColor="@color/white"
+                tools:text="Notes"/>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                app:tabGravity="fill"/>
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <include layout="@layout/view_chat" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                style="@style/AppTheme.AppButton2"
+                android:textAllCaps="false"
+                android:layout_marginEnd="3dp"
+                android:text="@string/accept"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <Button
+                android:id="@+id/btnReject"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                style="@style/AppTheme.AppButton2"
+                android:textAllCaps="false"
+                android:text="@string/reject"/>
+
+            <Button
+                android:id="@+id/btnMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                style="@style/AppTheme.AppButton2"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:text="@string/message"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginEnd="6dp"
+                style="@style/AppTheme.AppButton2"
+                android:textAllCaps="false"
+                android:text="@string/label_completed"/>
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                style="@style/AppTheme.AppButton2"
+                android:textAllCaps="false"
+                android:text="@string/send_estimate"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

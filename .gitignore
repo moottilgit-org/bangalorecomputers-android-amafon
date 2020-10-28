@@ -1,0 +1,10 @@
+.gradle
+.idea
+build
+key
+/app/build/*
+/app/release/*
+/*.iml
+.DS_Store
+.AppleDouble
+.LSOverride

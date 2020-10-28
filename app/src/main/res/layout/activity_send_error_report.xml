@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            app:srcCompat="@drawable/ic_launcher"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:padding="1dp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black_a"
+            android:textStyle="bold"
+            android:text="@string/app_name"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/llTitle"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="3dp" />
+
+    <LinearLayout
+        android:id="@+id/llErrorInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/divider1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/send_error_msg"/>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_warning_red"
+                android:contentDescription="@string/send_error"
+                android:scaleType="fitCenter"
+                android:padding="1dp"
+                android:layout_gravity="top|end" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/svErrorDetails"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp">
+            <TextView
+                android:id="@+id/tvErrorDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:maxLines="1"
+                android:fontFamily="sans-serif-condensed"
+                android:drawableEnd="@drawable/ic_expand_more"
+                tools:text="Error Details: \nSome error"/>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:background="?selectableItemBackground"
+                android:drawablePadding="6dp"
+                android:text="@string/close"
+                android:textColor="@color/colorAccent"
+                android:padding="5dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnSendReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:background="?selectableItemBackground"
+                android:drawablePadding="6dp"
+                android:text="@string/send_error"
+                android:textColor="@color/colorAccent"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/divider1"
+        android:layout_alignBottom="@+id/llErrorInfo"
+        android:background="@color/black_a"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible" >
+        <ProgressBar
+            android:id="@+id/pbSendProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/pbSendProgress"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/send_error_sending"/>
+    </RelativeLayout>
+
+</RelativeLayout>

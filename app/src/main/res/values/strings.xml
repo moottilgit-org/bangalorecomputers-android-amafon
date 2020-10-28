@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name">AMAfON</string>
+
+
+    <string name="label_orders">Orders</string>
+    <string name="label_order_details">Details</string>
+    <string name="label_preferences">Preferences</string>
+    <string name="label_item_selection">Item Selection</string>
+    <string name="payment_info">Payment Info</string>
+    <string name="upi_scanner">UPI Scanner</string>
+    <string name="upi_id">UPI ID</string>
+
+    <string name="label_signin">Please Sign In</string>
+    <string name="label_register">Please Sign Up</string>
+    <string name="label_profile">Profile</string>
+    <string name="label_username">Mobile number or Email ID</string>
+    <string name="label_fullname">Full Name</string>
+    <string name="label_mobile">Mobile number</string>
+    <string name="label_nick_name">Nick Name (optional)</string>
+    <string name="label_emailid">Email ID</string>
+    <string name="label_password">Password</string>
+    <string name="label_opassword">Old Password</string>
+    <string name="label_cpassword">Confirm Password</string>
+
+    <string name="label_completed">Completed</string>
+
+    <string name="error_please_enter_full_name">Please enter your name</string>
+    <string name="error_please_enter_mobile_number">Please enter mobile number</string>
+    <string name="error_please_enter_email_id">Please enter email id</string>
+    <string name="error_please_enter_login_id">Please enter login id</string>
+    <string name="error_please_enter_password">Please enter password</string>
+    <string name="error_please_enter_opassword">Please enter old password</string>
+    <string name="error_confirm_password_is_not_matching">Confirm password is not matching.</string>
+    <string name="error_connection_error">Connection Error</string>
+    <string name="error_invalid_opassword">Invalid old password</string>
+    <string name="change_password">Change password</string>
+    <string name="delete_account">Delete Account</string>
+
+    <string name="action_cancel">Cancel</string>
+    <string name="action_ok">OK</string>
+    <string name="close">Close</string>
+    <string name="clear">Clear</string>
+    <string name="view">View</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="delete">Delete</string>
+    <string name="action_signin">Sign In</string>
+    <string name="action_signup">Sign Up</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_check_for_updates">Check for updates</string>
+    <string name="action_update_now">Update Now</string>
+    <string name="refresh">Refresh</string>
+    <string name="message">Message</string>
+    <string name="messages">Messages</string>
+    <string name="update">Update</string>
+    <string name="send_estimate">Send estimate</string>
+    <string name="qty">Qty.</string>
+    <string name="rate">Rate</string>
+
+    <string name="already_registered">Already registered?</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+
+    <string name="no_stock">No Stock</string>
+    <string name="available">Available</string>
+
+    <string name="confirm">Confirm?</string>
+    <string name="accept_the_order">Accept the order?</string>
+    <string name="reject_the_order">Reject the order?</string>
+    <string name="send_the_estimate">Send the estimate?</string>
+    <string name="send">Send</string>
+    <string name="complete_the_order">Complete the order?</string>
+    <string name="update_payment_received">Confirm payment received?</string>
+
+    <string name="updating_order">Updating Order...!</string>
+    <string name="updating_stage">Updating Stage...!</string>
+    <string name="sending_estimate">Sending estimate...!</string>
+    <string name="completing_order">Completing Order...!</string>
+    <string name="sending_message">Sending message...!</string>
+
+    <string name="items">Items</string>
+    <string name="call">Call</string>
+    <string name="payment_received">Payment Received</string>
+    <string name="search_for">Search for&#8230;</string>
+
+    <string name="no_orders">No Orders</string>
+
+    <string name="attachments">Attachments</string>
+    <string name="attach_a_file">Attach a file</string>
+
+
+    <string name="total_items">Total Items</string>
+
+    <string name="invite_you_customer">Invite your Customer</string>
+    <string name="invite_via_wa">Invite via Whatsapp</string>
+    <string name="enter_customer_details">Enter Customer Details</string>
+    <string name="inviting_you_customer">Inviting Customer...!</string>
+    <string name="invitation_sent_to_customer">Invitation message sent to customer...!</string>
+    <string name="invitation_failed_try">Invitation failed. Try again...!</string>
+
+    <string name="send_error">Send Error Reprot</string>
+    <string name="send_error_msg">An unexpected error occurred and the app crashed. We regret the inconvenience.\n\nYou can help us resolve the problem asap by tapping on \'Send Error Report\' below.</string>
+    <string name="send_error_sending">Sending Error Report&#8230;!</string>
+    <string name="error_details">Error Details:</string>
+    <string name="send_error_success">Error sent to developer</string>
+    <string name="send_error_error">Unable to submit error. Please try again!</string>
+
+    <string name="feedback">Feedback -</string>
+    <string name="feedback_text">Leave a feedback or share your ideas</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="enquiry_reference">Enquiry reference</string>
+    <string name="feedback_sending">Sending Feedback&#8230;!</string>
+    <string name="send_feedback_success">Feedback sent to developer</string>
+    <string name="send_feedback_error">Unable to submit Feedback. Please try again!</string>
+
+
+
+
+    <string name="msg_camera_info">Tap to capture. Pinch/Stretch to zoom</string>
+    <string name="msg_camera_permission">Access to the camera is needed for detection</string>
+    <string name="msg_gms_vision_error_low_storage">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="msg_camera_permission_error">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="label_autofocus">Auto Focus</string>
+    <string name="label_userflash">Use Flash</string>
+
+
+
+
+
+    <string name="copy">Copy</string>
+    <string name="copied_to_clipboard">Copied to ClipBoard</string>
+</resources>

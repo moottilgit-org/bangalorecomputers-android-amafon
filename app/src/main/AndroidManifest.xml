@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.atoz.johnnysapp.store">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".MyApplication"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+<!--        <uses-library android:name="org.apache.http.legacy" android:required="false"/>-->
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="${applicationId}_v1" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_chat_white_24dp" />
+
+        <service
+            android:name=".receivers_services.Firebase_InstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".receivers_services.Firebase_MessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".ui.Login"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".ui.Register"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".ui.Profile"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".ui.ChangePWD"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".ui.Main"
+            android:label="@string/label_orders"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".ui.order_details.OrderDetails"
+            android:label="@string/label_order_details"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".ui.order_details.ItemSelection"
+            android:label="@string/label_item_selection"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.UpiInfo"
+            android:windowSoftInputMode="stateHidden"
+            android:label="@string/payment_info"
+            android:theme="@style/AppTheme.NoActionBar"  />
+
+        <activity
+            android:name=".barcodereader.BarcodeCaptureActivity"
+            android:label="@string/upi_scanner" />
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".ui.Preferences"
+            android:label="@string/label_preferences"/>
+
+        <activity
+            android:name=".ui.error_and_feedback.ActivitySendError"
+            android:theme="@style/AppTheme.PopupDialog"
+            android:excludeFromRecents="true"
+            android:process=":error_report"
+            android:taskAffinity=":error_report"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="${applicationId}.SEND_LOG" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.error_and_feedback.ActivitySendFeedback"
+            android:theme="@style/AppTheme.PopupDialog"
+            android:excludeFromRecents="true"
+            android:process=":error_report"
+            android:taskAffinity=":error_report"
+            android:windowSoftInputMode="stateHidden" />
+    </application>
+
+</manifest>

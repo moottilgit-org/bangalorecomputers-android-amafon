@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="0dp" >
+
+    <TextView
+        android:id="@+id/tvDateTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:gravity="bottom|center"
+        android:maxLines="1"
+        android:text="13/07/2017"
+        android:textSize="14sp"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/llMsgContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="50dp"
+        android:layout_below="@+id/tvDateTitle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/message_bubble_sent"
+            android:orientation="vertical"
+            android:layout_gravity="end"
+            android:minWidth="100dp"
+            android:padding="0dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvMessageFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:text="Name"
+                android:textColor="@color/dark_blue"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="10dp"
+                android:text="Hello"
+                android:linksClickable="true"
+                android:textSize="14sp"
+                android:autoLink="all"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical" >
+
+                <ImageButton
+                    android:id="@+id/imgPlay"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_play"
+                    android:background="?selectableItemBackground"/>
+
+                <SeekBar
+                    android:id="@+id/sbAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0.33">
+                <TextView
+                    android:id="@+id/tvTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:drawableStart="@drawable/receipt_read"
+                    android:gravity="bottom|start"
+                    android:maxLines="1"
+                    android:text="1:33 pm"
+                    android:textSize="12sp"
+                    android:visibility="gone"/>
+
+                <View
+                    android:id="@+id/vwSpacer"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tvTime2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:drawableEnd="@drawable/receipt_read"
+                    android:gravity="bottom|start"
+                    android:maxLines="1"
+                    android:text="1:33 pm"
+                    android:textSize="12sp"
+                    android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/tvChatWarning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="10dp"
+                    android:drawableEnd="@drawable/receipt_warning"
+                    android:gravity="bottom|start"
+                    android:maxLines="1"
+                    android:text="1"
+                    android:textSize="12sp"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

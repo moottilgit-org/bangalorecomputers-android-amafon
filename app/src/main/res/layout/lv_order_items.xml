@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        tools:text="#1" />
+
+    <LinearLayout
+        android:id="@+id/llItemSelection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:background="?selectableItemBackground"
+        android:layout_marginEnd="3dp">
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/colorPrimary"
+            tools:text="Item Name" />
+
+        <TextView
+            android:id="@+id/tvLinkName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black"
+            android:textColor="@color/colorPrimaryDark"
+            tools:text="Link Name" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnStockAvailable"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="@string/available"
+        android:background="@drawable/app_button_background" />
+
+    <Button
+        android:id="@+id/btnNoStock"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        android:textColor="@color/colorAccent"
+        android:text="@string/no_stock"
+        android:background="@drawable/app_button_background" />
+
+    <com.atoz.johnnysapp.store.utils.EditTextEx
+        android:id="@+id/edQty"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="end"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:inputType="numberDecimal"
+        android:hint="@string/qty"
+        android:textColor="@color/colorAccent"
+        android:selectAllOnFocus="true"
+        tools:text="999" />
+
+    <com.atoz.johnnysapp.store.utils.EditTextEx
+        android:id="@+id/edRate"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="end"
+        android:inputType="numberDecimal"
+        android:hint="@string/rate"
+        android:textColor="@color/colorAccent"
+        android:selectAllOnFocus="true"
+        tools:text="9999" />
+</LinearLayout>
