@@ -12,6 +12,7 @@ import com.atoz.johnnysapp.store.R;
 import com.atoz.johnnysapp.store.online.Customer;
 import com.atoz.johnnysapp.store.ui.base.ActivityEx;
 import com.atoz.johnnysapp.store.utils.Http;
+import com.atoz.johnnysapp.store.utils.PhoneNumberCleaner;
 import com.atoz.johnnysapp.store.utils.Pref;
 
 import org.json.JSONObject;
@@ -98,7 +99,7 @@ public class Register extends ActivityEx implements View.OnClickListener {
             showError("");
             showLoadingSignUp(true);
             Customer.register(this, edFullName.getText().toString(),
-                    edMobile.getText().toString(), edEmail.getText().toString(),
+                    PhoneNumberCleaner.format(edMobile.getText().toString()), edEmail.getText().toString(),
                     edPassword.getText().toString(), result -> {
                 try {
                     showLoadingSignUp(false);

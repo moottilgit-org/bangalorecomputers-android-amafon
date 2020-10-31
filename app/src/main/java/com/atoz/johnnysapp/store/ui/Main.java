@@ -36,6 +36,7 @@ import com.atoz.johnnysapp.store.utils.DateUtils;
 import com.atoz.johnnysapp.store.utils.DialogInput;
 import com.atoz.johnnysapp.store.utils.Http;
 import com.atoz.johnnysapp.store.utils.ImageUtils;
+import com.atoz.johnnysapp.store.utils.PhoneNumberCleaner;
 import com.atoz.johnnysapp.store.utils.Pref;
 import com.atoz.johnnysapp.store.utils.Toast;
 
@@ -334,9 +335,10 @@ public class Main extends ActivityEx {
             mReferActivityResult= DialogInput.showRefer(context, oldNumber, oldName,context.getResources().getString(R.string.enter_customer_details),
                     (newNumber, newName) -> {
                 try {
+                    final String number= PhoneNumberCleaner.format(newNumber);
                     mReferActivityResult= null;
                     ProgressHelper helper= ProgressHelper.get(context);
-                    Writer.refer(context, newNumber, newName, new AsyncListener() {
+                    Writer.refer(context, number, newName, new AsyncListener() {
                         @Override
                         public void onStart() {
                             helper.show(R.string.inviting_you_customer);
@@ -354,7 +356,7 @@ public class Main extends ActivityEx {
                                     Toast.makeText(context, R.string.invitation_sent_to_customer, Toast.LENGTH_LONG).show();
                                 } else {
                                     Toast.makeText(context, context.getResources().getString(R.string.invitation_failed_try) + (response==null?"":response.error()), Toast.LENGTH_LONG).show();
-                                    referANumber(context, newNumber, newName);
+                                    referANumber(context, number, newName);
                                 }
                             } catch (Exception e) {
                                 e.printStackTrace();

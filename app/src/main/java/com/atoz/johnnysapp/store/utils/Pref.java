@@ -119,7 +119,7 @@ public class Pref {
 
 	public static String getMobile(Context context) {
 		try {
-			String value= Pref.init(context).getString(MOBILE, "");
+			String value= PhoneNumberCleaner.format(Pref.init(context).getString(MOBILE, ""));
 			return value.isEmpty()?"":Encrypter.decryptContent(value);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -128,7 +128,7 @@ public class Pref {
 	}
 	public static void setMobile(Context context, String value) {
 		try {
-			Pref.init(context).setString(MOBILE, Encrypter.encryptContent(value));
+			Pref.init(context).setString(MOBILE, Encrypter.encryptContent(PhoneNumberCleaner.format(value)));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
